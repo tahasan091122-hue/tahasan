@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Start Here — Portfolio Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+Bengali:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#070A12; --line:rgba(255,255,255,.09);
+    --text:#EAF0FF; --muted:#8B95AE; --c1:#35E0F0; --c2:#7B5CFF; --c3:#FF7A59;
+    --grad:linear-gradient(115deg,#35E0F0,#7B5CFF 60%,#FF7A59 120%);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text); font-family:Inter,'Noto Sans Bengali',system-ui,sans-serif;
+    line-height:1.7; padding:48px 20px 90px; -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:''; position:fixed; inset:0; z-index:-1; pointer-events:none;
+    background:
+      radial-gradient(620px 620px at 88% -12%, rgba(123,92,255,.26), transparent 66%),
+      radial-gradient(520px 520px at -10% 42%, rgba(53,224,240,.16), transparent 66%);
+  }
+  .wrap{max-width:820px;margin:0 auto}
+  .top{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .mark{
+    width:46px;height:46px;border-radius:13px;display:grid;place-items:center;
+    background:var(--grad); color:#03060F; font-family:'Space Grotesk',sans-serif; font-weight:700;
+  }
+  h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.7rem,4vw,2.3rem);letter-spacing:-.02em;line-height:1.2}
+  .sub{color:var(--muted);margin-bottom:34px}
+  .card{
+    background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.012));
+    border:1px solid var(--line); border-radius:20px; padding:26px 28px; margin-bottom:20px;
+  }
+  .tag{
+    display:inline-flex;align-items:center;gap:10px;font-family:'Space Grotesk',sans-serif;
+    font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:var(--c1);margin-bottom:12px;
+  }
+  .tag i{width:24px;height:24px;border-radius:8px;background:rgba(53,224,240,.14);
+    border:1px solid rgba(53,224,240,.32);display:grid;place-items:center;font-style:normal;font-size:.8rem}
+  h2{font-family:'Space Grotesk',sans-serif;font-size:1.22rem;letter-spacing:-.015em;margin-bottom:12px}
+  p{margin-bottom:11px;color:#C7D0E4}
+  .bn{font-family:'Noto Sans Bengali',Inter,sans-serif;color:var(--c1);font-size:.98rem;margin-bottom:12px;line-height:1.85}
+  ol,ul{margin:0 0 11px 22px;color:#C7D0E4}
+  li{margin-bottom:8px}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.87em;
+    background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:7px;padding:2px 7px}
+  a{color:var(--c1)}
+  .box{border-radius:14px;padding:15px 17px;margin:14px 0;font-size:.94rem;
+    background:rgba(53,224,240,.06);border:1px solid rgba(53,224,240,.26)}
+  .box--warn{background:rgba(255,122,89,.07);border-color:rgba(255,122,89,.32)}
+  .box strong{color:#fff}
+  .creds{display:grid;grid-template-columns:120px 1fr;gap:10px 16px;align-items:center;
+    background:rgba(255,255,255,.04);border:1px solid var(--line);border-radius:14px;padding:16px 18px;margin:14px 0}
+  .creds span{color:var(--muted);font-size:.82rem;text-transform:uppercase;letter-spacing:.1em}
+  .creds b{font-family:ui-monospace,monospace;font-size:1rem;color:#fff;word-break:break-all}
+  .tree{font-family:ui-monospace,monospace;font-size:.86rem;color:#A7B2C9;line-height:1.85;
+    background:rgba(0,0,0,.28);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-x:auto}
+  .tree b{color:var(--c1);font-weight:500}
+  .foot{color:var(--muted);font-size:.88rem;text-align:center;margin-top:36px}
+  @media(max-width:600px){ .card{padding:20px 18px} .creds{grid-template-columns:1fr;gap:4px 0} }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="top"><span class="mark">WEB</span><h1>Start Here</h1></div>
+  <p class="sub">A ready-made portfolio website with a working Admin Panel. Put it online, then make it yours — no code, no rebuilding.</p>
+
+  <!-- what's in here -->
+  <section class="card">
+    <div class="tag"><i>1</i> What is in this folder</div>
+    <div class="tree">
+portfolio-website/<br>
+├── <b>START-HERE.html</b> &nbsp;&nbsp;← this page<br>
+├── README.md<br>
+└── <b>website/</b> &nbsp;&nbsp;← the whole website, this is what you upload<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── <b>admin/</b> &nbsp;&nbsp;the Admin Panel<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── assets/ &nbsp;&nbsp;design, scripts, images<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── netlify/ &nbsp;&nbsp;the server that saves your changes<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── index.html · services.html · portfolio.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── about.html · testimonials.html · contact.html<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── netlify.toml · _redirects · robots.txt · sitemap.xml
+    </div>
+    <p style="margin-top:14px">Nothing else is needed. Everything inside <code>website</code> goes online together.</p>
+  </section>
+
+  <!-- signing in -->
+  <section class="card">
+    <div class="tag"><i>2</i> Your Admin Panel</div>
+    <h2>Two ways in</h2>
+    <ul>
+      <li>Any page of the website → footer → <strong>Get in Touch</strong> → <strong>Admin Panel</strong> button</li>
+      <li>Or straight to <code>your-site.netlify.app/admin/</code></li>
+    </ul>
+    <div class="creds">
+      <span>Username</span><b>admin</b>
+      <span>Password</span><b>ChangeMe123!</b>
+    </div>
+    <div class="box box--warn">
+      <strong>Everyone who has these files knows this password</strong>, so the panel will not save
+      anything until you replace it. On your first sign-in it takes you straight to Admin Account —
+      set your own password there and the rest unlocks. Your new password is stored only as a
+      one-way hash and cannot be read back by anyone.
+    </div>
+    <p class="bn">প্রথমবার লগইন করলেই <b>Admin Account</b> পেজে নিয়ে যাবে। নিজের পাসওয়ার্ড না দেওয়া পর্যন্ত কিছুই সেভ হবে না।</p>
+  </section>
+
+  <!-- what you can edit -->
+  <section class="card">
+    <div class="tag"><i>3</i> What you can change</div>
+    <ul>
+      <li><strong>Home Page</strong> — hero text, your photo, rotating job titles, stats, every section heading, tools list</li>
+      <li><strong>My Work</strong> — add a client screenshot, a title and a short description; add or remove as many as you like</li>
+      <li><strong>About Me</strong> — your photo and your story</li>
+      <li><strong>Services</strong> — these also fill the home page cards, the footer and the Contact form dropdown</li>
+      <li><strong>Testimonials</strong> — replace the sample reviews with real client ones</li>
+      <li><strong>Contact Information</strong> — email, phone, WhatsApp, social links</li>
+      <li><strong>Inbox</strong> — every message sent through the contact form</li>
+      <li><strong>Images / Media</strong> — upload once, use anywhere</li>
+      <li><strong>Theme / Colors</strong> — four colours change every accent; six ready palettes</li>
+      <li><strong>Website Settings</strong> — brand name, <strong>logo image</strong>, browser tab icon, footer text, full content reset</li>
+      <li><strong>Admin Account</strong> — username and password</li>
+    </ul>
+    <p>Press Save and it is live. Every button writes to the server — nothing is pretend.</p>
+    <div class="box">
+      If a change does not show on the website within a few seconds, refresh once with
+      <code>Ctrl + Shift + R</code>. The storage can take a moment to catch up.
+    </div>
+  </section>
+
+  <!-- putting it online -->
+  <section class="card">
+    <div class="tag"><i>4</i> Putting it online (already done once)</div>
+    <p>Kept here in case you ever start a fresh site.</p>
+    <p class="bn">এটা একবার করাই আছে। নতুন করে সাইট বানালে তখন লাগবে।</p>
+    <ol>
+      <li>Create a free account at <a href="https://github.com/signup" target="_blank" rel="noopener">github.com/signup</a></li>
+      <li><a href="https://github.com/new" target="_blank" rel="noopener">github.com/new</a> → name it <code>my-portfolio</code>, choose <strong>Private</strong> → Create repository</li>
+      <li>Click <strong>uploading an existing file</strong> → open the <code>website</code> folder → select
+        <strong>everything inside it</strong> (Ctrl&nbsp;+&nbsp;A) → drag into the browser → <strong>Commit changes</strong></li>
+      <li>In Netlify: <strong>Add new site → Import an existing project → GitHub</strong> → pick the repository →
+        change nothing → <strong>Deploy</strong></li>
+      <li>On the project page click <strong>Make public</strong>, and rename the site under
+        <strong>Project configuration → Change site name</strong></li>
+    </ol>
+    <div class="box box--warn">
+      Dragging the folder straight onto Netlify puts the pages online but leaves the Admin Panel dead —
+      Netlify only switches the saving part on when the files arrive from GitHub. That is why step 3 exists.
+    </div>
+  </section>
+
+  <!-- updating later -->
+  <section class="card">
+    <div class="tag"><i>5</i> Changing the site later</div>
+    <p>Day-to-day text, images, projects, reviews and colours — all of that is the Admin Panel. You never
+      touch these files for that.</p>
+    <p>Only if the design or code itself changes do you re-upload: GitHub → your repository →
+      <strong>Add file → Upload files</strong> → drop the new files → <strong>Commit changes</strong>.
+      Netlify redeploys on its own in about a minute.</p>
+    <div class="box">
+      Re-uploading never wipes what you saved in the Admin Panel — your content and images live
+      separately from the code.
+    </div>
+  </section>
+
+  <p class="foot">Everything here has been tested end to end: login, saving, images, inbox, theme and password change.</p>
+</div>
+</body>
+</html>
